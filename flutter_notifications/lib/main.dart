@@ -42,7 +42,7 @@ void main() async {
 }
 
 void _startPushNotificationsHandler(FirebaseMessaging messaging) async {
-  String? token = await messaging.getToken();
+  String? token = await messaging.getToken(vapidKey: 'BKHnpVlqXWpQ3ALG6B_ykJ4MclIDRuH802AOYg-Yzs9DT6_zW6M_BKv7ITkNqEML1Lg5a9fCYQ2T_Vm_W5U0kn0');
   print('TOKEN: $token');
   setPushToken(token);
   //Foreground
